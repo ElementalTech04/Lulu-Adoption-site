@@ -3,6 +3,14 @@ import Image from "next/image";
 
 // @ts-ignore
 const ParallaxScrollContainer = ({ image, children}) => {
+
+    const imageProps = {
+        src: image.src,
+        alt: "Parallax Background",
+        layout: "fill",
+        objectFit: "cover"
+    }
+
     const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
@@ -25,13 +33,7 @@ const ParallaxScrollContainer = ({ image, children}) => {
         <div>
             {/* Parallax Image Section */}
             <div className="relative h-screen overflow-hidden">
-                <Image
-                    src= {image.src}
-                    alt="Parallax Background"
-                    layout="fill"
-                    objectFit="cover"
-                    priority // Ensures the image loads quickly
-                />
+                <Image {...imageProps} priority={true} className="absolute inset-0 object-cover w-full h-full" style={parallaxStyle}/>
                 <div className="relative z-10 flex items-center justify-center h-full bg-black bg-opacity-40">
                     {/* Child component or content over the parallax image */}
                     {children}
