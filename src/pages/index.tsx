@@ -1,4 +1,3 @@
-import Image from "next/image";
 import localFont from "next/font/local";
 import ParallaxScrollContainer from "@/pages/component/ParallaxScrollContainer";
 import React from "react";
