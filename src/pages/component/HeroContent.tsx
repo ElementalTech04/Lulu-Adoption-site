@@ -5,7 +5,7 @@ import scrollDown from "../../../assets/svg/scroll-down-white.svg";
 
 
 
-export const HeroContent = ({ title, description, image }: { title: string, description: string, image: any }) => {
+export const HeroContent = ({ title, description, image, scrollDownMessage }: { title: string, description: string, image: any, scrollDownMessage: string }) => {
 
     const imageProps: { src: string, layout: any } = {
         src: image.src,
@@ -21,7 +21,7 @@ export const HeroContent = ({ title, description, image }: { title: string, desc
 
     return (
         <div>
-            <Image {...imageProps} className="rounded-lg"/>
+            <Image {...imageProps} className="rounded-lg z-0"/>
             <div
                 className="relative rounded-lg z-10 flex items-center justify-center h-full bg-black bg-opacity-40">
                 <div className="grid grid-cols-3 grid-rows-4 width-full h-full gap-4">
@@ -30,9 +30,9 @@ export const HeroContent = ({ title, description, image }: { title: string, desc
                         <h1 className="text-7xl font-extrabold">{title}</h1>
                         <p className="mt-4 text-lg">{description}</p>
                     </div>
-                    <div className="absolute bottom-20 w-full flex flex-col items-center justify-end">
+                    <div className="absolute bottom-52 w-full flex flex-col items-center justify-end">
                         <Image {...scrollDownImageProps}/>
-                        <p className="mt-3 text-md">Scroll down to see more about Lulu!</p>
+                        <p className="mt-3 text-md">{scrollDownMessage}</p>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,10 @@ import logo from "../../assets/images/logo.png";
 import scrollDown from "../../assets/svg/scroll-down-white.svg";
 import heroImage from "../../assets/images/Lulu-1.jpg";
 import {HeroContent} from "@/pages/component/HeroContent";
+import AdoptionForm from "@/pages/component/AdoptionForm";
+import {PetCard} from "@/pages/component/PetCard";
+import {MediaGallery} from "@/pages/component/MediaGallery";
+import {LuluNews} from "@/pages/component/LuluNews";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -28,8 +32,9 @@ const logoImageProps: { src: string, width: number, height: number, layout: any 
 
 
 const heroContent = {
-    title: `Hi! My name is ${siteData?.petData?.name}`,
+    title: `Hi! My name is ${siteData?.petData?.name} 🐶`,
     description: `I'm a ${siteData?.petData?.age} year old ${siteData?.petData?.breed} from ${siteData?.petData?.location} and ${siteData?.petData?.funFact}!`,
+    scrollDownMessage: `Scroll down to see more about ${siteData?.petData?.name}!`,
 }
 
 export default function Home() {
@@ -40,10 +45,11 @@ export default function Home() {
                 className={`${geistSans.variable} ${geistMono.variable} top-5 p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
             >
 
-                <ParallaxScrollContainer heroChildren={<HeroContent title={heroContent.title} description={heroContent.description} image={heroImage}/>}>
-                    <div className="flex flex-col items-center justify-center gap-16 sm:flex-row">
-                        <div className="flex flex-col items-center justify-center gap-8 sm:flex-row">
-                        </div></div>
+                <ParallaxScrollContainer heroChildren={<HeroContent title={heroContent.title} description={heroContent.description} image={heroImage} scrollDownMessage={heroContent.scrollDownMessage} />} >
+                    <PetCard />
+                    <MediaGallery />
+                    <LuluNews />
+                    <AdoptionForm />
                 </ParallaxScrollContainer>
             </div>
         </div>

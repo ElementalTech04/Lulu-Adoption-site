@@ -24,11 +24,11 @@ const ParallaxScrollContainer = ({heroChildren, children}: {heroChildren: any, c
     return (
         <div>
             {/* Parallax Image Section */}
-            <div className="relative h-screen overflow-hidden" style={parallaxStyle}>
+            <div className="z-0 relative h-screen overflow-hidden" style={parallaxStyle}>
                 {heroChildren}
             </div>
             {/* Content Section */}
-            <div className="px-4 py-16 bg-black bg-opacity-40 r">
+            <div className="z-10 px-4 bg-black bg-opacity-40 r">
                 {children}
             </div>
         </div>
