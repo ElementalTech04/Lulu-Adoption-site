@@ -2,6 +2,9 @@ import localFont from "next/font/local";
 import ParallaxScrollContainer from "@/pages/component/ParallaxScrollContainer";
 import React from "react";
 import lulu1 from "../../assets/images/Lulu-1.jpg";
+import siteData from "../../site-data.json";
+import Image from "next/legacy/image";
+import logo from "../../assets/images/logo.png";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -13,18 +16,32 @@ const geistMono = localFont({
     variable: "--font-geist-mono",
     weight: "100 900",
 });
+const logoImageProps: { src: string, width: number, height: number, layout: any } = {
+    src: logo.src,
+    width: 115,
+    height: 100,
+    layout: "fixed",
+}
+
+const scrollDownImageProps: { src: string, width: number, height: number, layout: any } = {
+    src: scrollDown.src,
+    width: 50,
+    height: 75,
+    layout: "fixed",
+}
 
 export default function Home() {
     return (
-        <div
-            className={`${geistSans.variable} ${geistMono.variable} p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-        >
-            <ParallaxScrollContainer image={lulu1}>
-                <div className="text-white text-center">
-                    <h1 className="text-5xl font-bold">Hi! My name is Lulu</h1>
-                    <p className="mt-4 text-lg">I am a 6 year old border collie/labrador/Burmese mountain dog mix and the best cuddler. Scroll down to find out more about me.</p>
-                </div>
-            </ParallaxScrollContainer>
+        <div>
+            <div className="absolute top-0 left-3"><Image {...logoImageProps}/></div>
+            <div
+                className={`${geistSans.variable} ${geistMono.variable} top-5 p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+            >
+
+                <ParallaxScrollContainer image={lulu1}>
+
+                </ParallaxScrollContainer>
+            </div>
         </div>
     );
 }

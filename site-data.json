@@ -1,0 +1,15 @@
+{
+  "petData": {
+    "name": "Lulu",
+    "surname": "",
+    "type": "dog",
+    "age": 6,
+    "breed": "border collie/labrador/Burmese mountain dog mix",
+    "location": "Philadelphia, PA",
+    "image": "",
+    "funFact": "I am the best cuddler"
+  },
+  "adoptionData": {
+    "adoptionStartDate": "09/27/2024"
+  }
+}
