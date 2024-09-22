@@ -29,3 +29,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ### 9/21
 
 ![progress.9.21.png](assets/images/progress.9.21.png)
+
+### 9/22
+
+![progress.9.22.png](assets/images/progress.9.22.png)

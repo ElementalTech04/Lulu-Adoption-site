@@ -28,3 +28,18 @@ export interface AdoptionRequest {
     familyInfo: FamilyInfo;
     appointmentAvailability: [];
 }
+
+
+export interface PetInfoCardProps {
+    picture: any; // Image URL or path
+    petType: string;
+    gender: string;
+    weight: number;
+    height: number;
+    physique: string;
+    name: string;
+    dob: string; // Date of birth
+    breed: string;
+    location: string;
+    bio: string;
+}

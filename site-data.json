@@ -7,7 +7,12 @@
     "breed": "border collie/labrador/Burmese mountain dog mix",
     "location": "Philadelphia, PA",
     "image": "",
-    "funFact": "I am the best cuddler"
+    "funFact": "I am the best cuddler",
+    "dob": "09/06/2018",
+    "gender": "female",
+    "weight": 80,
+    "height": 180,
+    "physique": "chonky"
   },
   "adoptionData": {
     "adoptionStartDate": "09/27/2024"

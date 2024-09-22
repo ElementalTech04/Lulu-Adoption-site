@@ -5,54 +5,7 @@ import { motion } from "framer-motion";
 
 import scrollDown from "../../../assets/svg/scroll-down-white.svg";
 
-// Motion variants for animations
-const titleVariants = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            type: "spring",
-            stiffness: 50,
-            damping: 15,
-            delay: 0.2,
-        },
-    },
-};
 
-const descriptionVariants = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            type: "spring",
-            stiffness: 50,
-            damping: 15,
-            delay: 0.4,
-        },
-    },
-};
-
-const scrollImageVariants = {
-    bounce: {
-        y: [0, -10, 0],
-        transition: {
-            duration: 0.8,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-        },
-    },
-};
-
-const fadeInVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { duration: 1.2, delay: 0.6 },
-    },
-};
 
 export const HeroContent = ({ title, description, image, scrollDownMessage }: { title: string, description: string, image: any, scrollDownMessage: string }) => {
 
@@ -67,6 +20,55 @@ export const HeroContent = ({ title, description, image, scrollDownMessage }: { 
         height: 75,
         layout: "fixed",
     }
+
+    // Motion variants for animations
+    const titleVariants = {
+        hidden: { opacity: 0, x: 100 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                type: "spring",
+                stiffness: 50,
+                damping: 15,
+                delay: 0.2,
+            },
+        },
+    };
+
+    const descriptionVariants = {
+        hidden: { opacity: 0, x: 100 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                type: "spring",
+                stiffness: 50,
+                damping: 15,
+                delay: 0.4,
+            },
+        },
+    };
+
+    const scrollImageVariants = {
+        bounce: {
+            y: [0, -10, 0],
+            transition: {
+                duration: 0.8,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+            },
+        },
+    };
+
+    const fadeInVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { duration: 1.2, delay: 0.6 },
+        },
+    };
 
     return (
         <div>
